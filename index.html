@@ -58,10 +58,6 @@
       margin: auto;
     }
 
-    /* =========================
-       BUG #10 FIX
-       SOLID STICKY HEADER
-       ========================= */
 
     header {
       position: sticky;
@@ -171,11 +167,6 @@
       padding: 5px;
       line-height: 1;
     }
-
-    /* =========================
-       BUG #12 FIX
-       EXTRA TOP SPACING
-       ========================= */
 
     .hero {
       background: linear-gradient(135deg, #eef9fc 0%, #fff 62%);
@@ -294,10 +285,6 @@
       text-align: right;
     }
 
-    /* ======================
-       BUG #11 FIX
-       SCROLL POSITION
-       ========================= */
 
     section {
       padding: 82px 0;
@@ -513,8 +500,6 @@
       font-size: 14px;
     }
 
-    /* FORM */
-
     .form-wrap {
       display: grid;
       grid-template-columns: .8fr 1.2fr;
@@ -663,7 +648,7 @@
         border-top: 1px solid var(--line);
         z-index: 100;
       }
-      /* I added this code to fix the bug */
+      
       .visual {
     min-height: auto;
     padding: 16px;
@@ -722,19 +707,12 @@
 
     @media (max-width: 560px) {
 
-      /* =========================
-         BUG #11 FIX
-         MOBILE SCROLL POSITION
-         ========================= */
 
       html {
         scroll-behavior: smooth;
         scroll-padding-top: 76px;
       }
 
-      /* BUG #10 FIX:
-         Solid mobile header
-      */
 
       header {
         position: sticky;
@@ -752,9 +730,10 @@
       /* Fix for mobile logo shaking/flickering:*/
 
       .logo {
-      display: flex;
-      align-items: center;
-        
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
       }
 
       /* BUG #11 FIX */
@@ -780,7 +759,6 @@
         grid-template-columns: 1fr;
       }
 
-      /* TODAY'S PICKUP - MOBILE FIX */
 
       .visual {
         min-height: 0;
@@ -972,7 +950,7 @@
 
     </section>
 
-    <!-- SERVICES -->
+   
 
     <section id="services">
 
@@ -1118,7 +1096,7 @@
 
     </section>
 
-    <!-- HOW IT WORKS -->
+   
 
     <section class="steps" id="how">
 
@@ -1208,7 +1186,6 @@
 
     </section>
 
-    <!-- PRICING -->
 
     <section id="pricing">
 
@@ -1358,7 +1335,7 @@
 
     </section>
 
-    <!-- ABOUT -->
+  
 
     <section id="about">
 
@@ -1434,7 +1411,7 @@
 
     </section>
 
-    <!-- TESTIMONIALS -->
+   
 
     <section class="testimonials">
 
@@ -1520,7 +1497,7 @@
 
     </section>
 
-    <!-- FAQ -->
+    
 
     <section id="faq">
 
@@ -1608,8 +1585,6 @@
 
     </section>
 
-    <!-- BOOKING -->
-
     <section id="booking">
 
       <div class="container">
@@ -1638,7 +1613,7 @@
 
     </section>
 
-    <!-- CONTACT -->
+   
 
     <section id="contact">
 
@@ -1750,8 +1725,6 @@
                   type="date"
                   name="date"
                 >
-
-
               </div>
 
               <div class="field">
