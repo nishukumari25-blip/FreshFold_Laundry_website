@@ -713,28 +713,20 @@
         scroll-padding-top: 76px;
       }
 
-
-      header {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        background: #fff;
-        opacity: 1;
-        transform: translateZ(0);
-        -webkit-transform: translateZ(0);
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-      }
       /* Fix for mobile logo shaking/flickering:*/
 
-      .logo {
-        transform: translateZ(0);
-        -webkit-transform: translateZ(0);
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
-      }
+      header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  position: relative;
+  z-index: 2;
+}
 
       /* BUG #11 FIX */
 
@@ -2097,18 +2089,11 @@
     );
 
 
-    window.addEventListener(
-      'resize',
-      function () {
-
-        if (window.innerWidth > 850) {
-
-          closeMenu();
-
-        }
-
-      }
-    );
+    window.addEventListener('resize', function () {
+  if (window.innerWidth > 1000) {
+    closeMenu();
+  }
+});
 
 
     /* =========================
