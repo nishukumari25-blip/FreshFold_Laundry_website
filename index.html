@@ -106,27 +106,31 @@
       gap: 26px;
       font-weight: 650;
       font-size: 14px;
+      white-space: nowrap;
     }
 
     .links a {
       transition: color .2s ease;
+      white-space: nowrap;
     }
 
     .links a:hover {
       color: var(--blue);
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border: 0;
-      border-radius: 12px;
-      padding: 13px 20px;
-      font-weight: 750;
-      cursor: pointer;
-      transition: .25s ease;
-    }
+      .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 12px;
+  padding: 13px 20px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: .25s ease;
+  white-space: nowrap;
+}
+    
 
     .btn-primary {
       background: var(--navy);
@@ -642,7 +646,7 @@
 
     /* TABLET / MOBILE */
 
-    @media (max-width: 850px) {
+    @media (max-width: 1000px) {
 
       .links {
         display: none;
